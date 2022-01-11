@@ -25,7 +25,7 @@ function resetVid() {
 vid.addEventListener("ended", resetVid);
 document.querySelector("#footer-left").addEventListener("dblclick", resetVid);
 vid.setAttribute("playsinline", "");
-vid.src = "mystery-video.mp4";
+vid.src = "mv.mp4";
 vid.style.display = "none";
 vid.style.margin = "0 auto";
 vid.style.minHeight = "100%";
