@@ -27,6 +27,8 @@ document.querySelector("#footer-left").addEventListener("dblclick", resetVid);
 vid.setAttribute("playsinline", "");
 vid.src = "mystery-video.mp4";
 vid.style.display = "none";
+vid.style.margin = "0 auto";
+vid.style.minHeight = "100%";
 vid.preload = "auto";
 background.appendChild(vid);
 document.querySelector("#multiplayer-button").addEventListener("click", function() {
@@ -35,6 +37,6 @@ document.querySelector("#multiplayer-button").addEventListener("click", function
 	background.style.backgroundImage = "none";
 	background.style.backgroundColor = "black";
 	background.style.filter = "none";
-	vid.style.display = "";
+	vid.style.display = "block";
 	vid.play();
 });
