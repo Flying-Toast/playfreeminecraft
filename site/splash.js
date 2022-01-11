@@ -9,15 +9,15 @@ Array.from(document.querySelectorAll(".menu-button")).forEach(function(i) {
 
 let triggered = false;
 let vid = document.createElement("video");
+let background = document.querySelector("#background");
 function resetVid() {
 	if (!triggered) {
 		return;
 	}
 	triggered = false;
-	vid.remove();
-	let background = document.querySelector("#background");
 	vid.pause();
 	vid.currentTime = 0;
+	vid.style.display = "none";
 	background.style.backgroundImage = "";
 	background.style.backgroundColor = "";
 	background.style.filter = "";
@@ -26,13 +26,15 @@ vid.addEventListener("ended", resetVid);
 document.querySelector("#footer-left").addEventListener("dblclick", resetVid);
 vid.setAttribute("playsinline", "");
 vid.src = "mystery-video.mp4";
+vid.style.display = "none";
+vid.preload = "auto";
+background.appendChild(vid);
 document.querySelector("#multiplayer-button").addEventListener("click", function() {
 	if (triggered) { return; }
 	triggered = true;
-	let background = document.querySelector("#background");
-	background.appendChild(vid);
 	background.style.backgroundImage = "none";
 	background.style.backgroundColor = "black";
 	background.style.filter = "none";
+	vid.style.display = "";
 	vid.play();
 });
