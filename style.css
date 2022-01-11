@@ -1,0 +1,164 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "minecraftregular";
+	src: url("fonts/mc-regular.woff2") format("woff2"), url("fonts/mc-regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: "minecraftregular";
+	cursor: default;
+	user-select: none; -webkit-user-select: none;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+#background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #849CD5;
+	background-image: url("background.png");
+	background-size: cover;
+	z-index: -1;
+	transform: scale(1.1);
+	filter: blur(8px);
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+.title {
+	font-size: 125px;
+	text-align: center;
+	color: transparent;
+	margin-bottom: 75px;
+	font-weight: bold;
+	font-family: serif;
+	background-image: url("title.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 0 30px;
+}
+
+.menu-button {
+	display: block;
+	font-size: 23px;
+	width: 40%;
+	margin: 8px auto;
+	padding: 0 0;
+	padding-top: 3px;
+	padding-bottom: 7px;
+	border-radius: 0;
+	border: 3px solid black;
+	color: white;
+	background-color: #8D8D8D;
+	box-shadow: inset -2px -4px #706F6F;
+	text-align: center;
+	text-decoration: none;
+}
+
+.secondary-buttons, .menu-button {
+	width: 40%;
+}
+
+.secondary-buttons {
+	margin: 0 auto;
+	display: flex;
+}
+
+.secondary-buttons .menu-button {
+	display: inline-block;
+	width: 50%;
+}
+
+.secondary-buttons .menu-button:first-child {
+	margin-left: 0;
+	margin-right: 5px;
+}
+
+.secondary-buttons .menu-button:last-child {
+	margin-right: 0;
+	margin-left: 5px;
+}
+
+.primary-buttons {
+	margin-bottom: 35px;
+}
+
+.menu-button:hover {
+	background-color: #7A8ABF;
+}
+
+.menu-button:active {
+	box-shadow: inset 2px 4px #706F6F;
+	background-color: #8D8D8D;
+}
+
+.messages {
+	text-align: center;
+	margin-bottom: 100px;
+	margin-top: 40px;
+}
+
+#message-wrapper {
+	display: inline-block;
+	position: relative;
+}
+
+#motd {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	white-space: nowrap;
+	margin-left: calc(-50% - 85px);
+	transform: rotate(-20deg);
+	line-height: 26px;
+}
+
+.message {
+	color: #F4FF00;
+	text-shadow: 2px 2px #404701;
+	animation-name: pulse;
+	animation-duration: 0.25s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes pulse {
+	from {
+		font-size: 22px;
+	}
+
+	to {
+		font-size: 25px;
+	}
+}
+
+.footer-item {
+	position: fixed;
+	bottom: 0;
+	color: white;
+	font-size: 22px;
+}
+
+#footer-left {
+	left: 0;
+}
+
+#footer-right {
+	right: 0;
+}
