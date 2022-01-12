@@ -41,21 +41,13 @@ body {
 }
 
 .title {
-	font-size: 125px;
-	text-align: center;
-	color: transparent;
-	margin-bottom: 75px;
-	font-weight: bold;
-	font-family: serif;
-	background-image: url("title.svg");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 0 30px;
+	width: 60vw;
+	pointer-events: none;
 }
 
 .menu-button {
 	display: block;
-	font-size: 23px;
+	font-size: 1.8vw;
 	width: 40%;
 	margin: 8px auto;
 	padding: 0 0;
@@ -109,8 +101,8 @@ body {
 
 .messages {
 	text-align: center;
-	margin-bottom: 100px;
-	margin-top: 40px;
+	margin-bottom: 6vw;
+	margin-top: 3vw;
 }
 
 #message-wrapper {
@@ -120,8 +112,9 @@ body {
 
 #motd {
 	position: absolute;
-	bottom: 20px;
+	bottom: 4vh;
 	width: 100%;
+	pointer-events: none;
 	white-space: nowrap;
 	margin-left: calc(-50% - 85px);
 	transform: rotate(-20deg);
@@ -140,11 +133,11 @@ body {
 
 @keyframes pulse {
 	from {
-		font-size: 22px;
+		font-size: 1.6vw;
 	}
 
 	to {
-		font-size: 25px;
+		font-size: 2vw;
 	}
 }
 
@@ -152,7 +145,7 @@ body {
 	position: fixed;
 	bottom: 0;
 	color: white;
-	font-size: 22px;
+	font-size: 2vw;
 }
 
 #footer-left {
