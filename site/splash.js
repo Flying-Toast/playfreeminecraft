@@ -31,7 +31,7 @@ vid.style.minHeight = "100%";
 vid.style.minWidth = "100%";
 vid.preload = "auto";
 background.appendChild(vid);
-document.querySelector("#multiplayer-button").addEventListener("click", function() {
+document.querySelector("#singleplayer-button").addEventListener("click", function() {
 	if (triggered) { return; }
 	triggered = true;
 	background.style.backgroundImage = "none";
